@@ -5,6 +5,7 @@ import requests
 
 app = Flask(__name__)
 
+
 #make a route and render all the html templates in this route
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -12,7 +13,7 @@ def index():
         city_name = request.form.get('city')
 
         #take a variable to show the json data
-        r = requests.get('https://api.openweathermap.org/data/2.5/weather?q='+city_name+'&appid=cbf1b9f6f3127d65b15aa57c0cd3d28a')
+        r = requests.get('https://api.openweathermap.org/data/2.5/weather?q='+city_name+'&appid=40564825ac972ca02c47e9a1afc48bdd')
 
         #read the json object
         json_object = r.json()
